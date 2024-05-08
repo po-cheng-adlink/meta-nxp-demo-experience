@@ -18,7 +18,7 @@ index 82d87ea..6516ee7 100755
  REALPATH="$(readlink -e "$0")"
  BASEDIR="$(dirname "${REALPATH}")/.."
 -MODELS_DIR="${BASEDIR}/downloads/models/classification"
-+MODELS_DIR="/home/root/.cache/gopoint"
++MODELS_DIR="/opt/gopoint-apps/downloads"
  
  source "${BASEDIR}/common/common_utils.sh"
  source "${BASEDIR}/classification/classification_utils.sh"
@@ -31,7 +31,7 @@ index b771615..4c34a3c 100755
  REALPATH="$(readlink -e "$0")"
  BASEDIR="$(dirname "${REALPATH}")/.."
 -MODELS_DIR="${BASEDIR}/downloads/models/detection"
-+MODELS_DIR="/home/root/.cache/gopoint"
++MODELS_DIR="/opt/gopoint-apps/downloads"
  
  source "${BASEDIR}/common/common_utils.sh"
  source "${BASEDIR}/detection/detection_utils.sh"
@@ -44,7 +44,7 @@ index 7facc1a..bff8d0d 100755
          current_folder = os.path.dirname(os.path.abspath(__file__))
  
 -        model_dir = os.path.join(current_folder, '../downloads/models/pose')
-+        model_dir = os.path.realpath("/home/root/.cache/gopoint")
++        model_dir = os.path.realpath("/opt/gopoint-apps/downloads")
          self.tflite_path = os.path.join(model_dir, tflite_model)
          if not os.path.exists(self.tflite_path):
              raise FileExistsError(f'cannot find tflite model [{self.tflite_path}]')

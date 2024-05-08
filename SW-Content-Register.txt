@@ -1,15 +1,15 @@
 NXP Software Content Register
 
 Release: GoPoint for i.MX Applications Processors
-Version: 4.8
+Version: 4.9
 Date: March 2024
-Outgoing License: LA_OPT_NXP_Software_License v53 December 2023 - Additional distribution license granted - Section 2.3 applies
+Outgoing License: LA_OPT_NXP_Software_License v56 April 2024 - Additional distribution license granted - Section 2.3 applies
 License File: DEXP-LICENSE.txt
 
 --------------- THIS PACKAGE ---------------
 
 Package:                    meta-nxp-demo-experience
-Release branch:             nanbield-6.6.3-1.0.0
+Release branch:             scarthgap-6.6.23-2.0.0
 Outgoing License:           MIT
 License File:               LICENSE.txt
 Package Category:           Software build scripts
@@ -21,7 +21,7 @@ Origin:                     NXP (MIT) Yocto Recipes
 ---------- OTHER REQUIRED PACKAGES ---------
 
 Package:                    nxp-demo-experience
-Release branch:             lf-6.6.3_1.0.0
+Release branch:             lf-6.6.23_2.0.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience/LICENSE.txt
 Package Category:           Demo application
@@ -33,7 +33,7 @@ Origin:                     NXP (BSD-2-Clause)
                             The Qt Company Ltd. (BSD-3-Clause)
 
 Package:                    nxp-demo-experience-demos-list
-Release branch:             lf-6.6.3_1.0.0
+Release branch:             lf-6.6.23_2.0.0
 Outgoing License:           BSD-2-Clause
 License File:               nxp-demo-experience-demos-list/LICENSE.txt
 Package Category:           Configuration
@@ -44,8 +44,8 @@ Origin:                     NXP (BSD-2-Clause, BSD-3-Clause, Apache-2.0)
                             Font Awesome (CC-BY-4.0) https://fontawesome.com/icons
 
 Package:                    nxp-demo-experience-assets
-Release branch:             lf-6.6.3_1.0.0
-Outgoing License:           LA_OPT_NXP_Software_License v53 December 2023 - Additional distribution license granted - Section 2.3 applies
+Release branch:             lf-6.6.23_2.0.0
+Outgoing License:           LA_OPT_NXP_Software_License v56 April 2024 - Additional distribution license granted - Section 2.3 applies
                             Files may be distributed according to the license noted in the headers or README.md files
 License File:               nxp-demo-experience-assets/LICENSE.txt
 Package Category:           Demo application

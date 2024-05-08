@@ -4,7 +4,7 @@ SECTION = "Machine Learning"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3d5621953a6b13048ccb5e891b99e00e"
 
-IMX_NNSTREANER_DIR = "/home/root/.nxp-demo-experience/scripts/machine_learning/nnstreamer"
+IMX_NNSTREANER_DIR = "/opt/gopoint-apps/scripts/machine_learning/nnstreamer"
 
 NXP_IMX_NNSTREANER_SRC ?= "git://github.com/nxp-imx/nxp-nnstreamer-examples.git;protocol=https"
 SRCBRANCH = "main"

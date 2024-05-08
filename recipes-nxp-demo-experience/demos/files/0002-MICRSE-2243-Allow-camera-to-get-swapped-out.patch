@@ -16,7 +16,7 @@ index bff8d0d..e06a0be 100755
              raise FileExistsError(f'cannot find tflite model [{self.tflite_path}]')
  
 -        video_dir = os.path.join(current_folder, '../downloads/media/movies')
-+        video_dir = os.path.realpath("/home/root/.cache/gopoint")
++        video_dir = os.path.realpath("/opt/gopoint-apps/downloads/gopoint")
          self.video_path = os.path.join(video_dir, self.video_file)
          if not os.path.exists(self.video_path):
              raise FileExistsError(f'cannot find video [{self.video_path}]')
