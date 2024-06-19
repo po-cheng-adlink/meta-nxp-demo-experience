@@ -2,7 +2,7 @@ SUMARY = "EdgeLock Enclave(ELE) security demo"
 DESCRIPTION = "Recipe of ELE demo application"
 SECTION = "Security"
 LICENSE = "Proprietary"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=e83dc597b6110019e76dbc80cda8df23"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=1053d8bb787ee53eb7a075420a4a616e"
 
 NXP_ELE_DEMO_SRC ?= "gitsm://github.com/nxp-imx-support/imx-ele-demo.git;protocol=https"
 
