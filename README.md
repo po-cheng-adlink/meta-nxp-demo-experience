@@ -42,7 +42,7 @@ Releases are tracked against the i.MX Linux software releases. Supported release
 
 Release    | Yocto Project Version | Linux Software Release
 ---        | ---                   | ---
-Scarthgap  | 5.0                   | 6.6.23_2.0.0
+Scarthgap  | 5.0                   | 6.6.23_2.0.0<br>6.6.36_2.1.0
 Nanbield   | 4.3                   | 6.6.3_1.0.0
 Mickledore | 4.2                   | 6.1.55_2.2.0<br>6.1.36_2.1.0<br>6.1.22_2.0.0
 Langdale   | 4.1                   | 6.1.1_1.0.0

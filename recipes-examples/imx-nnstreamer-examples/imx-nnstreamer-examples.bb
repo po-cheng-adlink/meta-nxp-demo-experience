@@ -4,7 +4,7 @@ SECTION = "Machine Learning"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3d5621953a6b13048ccb5e891b99e00e"
 
-IMX_NNSTREANER_DIR = "/opt/gopoint-apps/scripts/machine_learning/nnstreamer"
+IMX_NNSTREANER_DIR = "${GPNT_APPS_FOLDER}/scripts/machine_learning/nnstreamer"
 
 NXP_IMX_NNSTREANER_SRC ?= "git://github.com/nxp-imx/nxp-nnstreamer-examples.git;protocol=https"
 SRCBRANCH = "main"
@@ -38,7 +38,6 @@ do_install() {
     install -d ${D}${IMX_NNSTREANER_DIR}/common
     cp -r ${WORKDIR}/git/common/* ${D}${IMX_NNSTREANER_DIR}/common
     cp ${WORKDIR}/git/LICENSE ${D}${IMX_NNSTREANER_DIR}
-    cp ${WORKDIR}/git/README.md ${D}${IMX_NNSTREANER_DIR}
     cp ${WORKDIR}/git/SCR-1.3.txt ${D}${IMX_NNSTREANER_DIR}
 
     install -d ${D}${IMX_NNSTREANER_DIR}/classification

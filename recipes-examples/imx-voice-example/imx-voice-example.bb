@@ -15,7 +15,7 @@ NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=htt
 SRCBRANCH_voice = "MM_04.08.03_2312_L6.6.y"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
-SRCBRANCH_model = "lf-6.6.23_2.0.0"
+SRCBRANCH_model = "lf-6.6.36_2.1.0"
 
 SRC_URI = "\
     ${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
@@ -24,7 +24,7 @@ SRC_URI = "\
 SRCREV_FORMAT = "voice_model"
 
 SRCREV_voice = "5eac64dc0f93c755941770c46d5e315aec523b3d"
-SRCREV_model = "00e5853b0ac0b89abfd65213067f5eed48dc0a27"
+SRCREV_model = "a552bd1ed30e93011d470636294ff3fa54b9690a"
 
 S = "${WORKDIR}/git"
 
@@ -40,13 +40,13 @@ do_compile () {
 }
 
 do_install() {
-    install -d ${D}/opt/gopoint-apps/bin
-    install -m 0755 ${WORKDIR}/git/release/voice_ui_app ${D}/opt/gopoint-apps/bin
+    install -d ${D}${GPNT_APPS_FOLDER}/bin
+    install -m 0755 ${WORKDIR}/git/release/voice_ui_app ${D}${GPNT_APPS_FOLDER}/bin
 }
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-FILES:${PN} += "/opt/gopoint-apps/bin/voice_ui_app"
+FILES:${PN} += "${GPNT_APPS_FOLDER}/bin/voice_ui_app"
 INSANE_SKIP:${PN} += "dev-so"
 
 COMPATIBLE_MACHINE = "(mx8-nxp-bsp|mx9-nxp-bsp)"

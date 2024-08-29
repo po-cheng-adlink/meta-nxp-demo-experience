@@ -7,9 +7,9 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/git/LICENSE.txt;md5=50abc977283affbd6ec84a
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
 SRCBRANCH = "master"
-SRCREV = "4e67ce33e8905c44395478cdb7a52316a8a5f8fe"
+SRCREV = "ab1304afa7fa4ec4f839bbe0b9c06dadb2a21d25"
 
-IMX_VOICE_PLAYER_DIR = "/opt/gopoint-apps/scripts/multimedia/imx-voiceplayer"
+IMX_VOICE_PLAYER_DIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/imx-voiceplayer"
 
 SRC_URI = "${NXP_IMX_VOICEPLAYER_SRC};branch=${SRCBRANCH} \
           "

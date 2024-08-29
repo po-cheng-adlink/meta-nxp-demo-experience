@@ -7,13 +7,13 @@ NXPAFE_VOICESEEKER_SRC ?= "git://github.com/nxp-imx/imx-voiceui.git;protocol=htt
 SRCBRANCH_voice = "MM_04.09.00_2405_L6.6.y"
 
 NXP_DEMO_ASSET_SRC ?= "git://github.com/NXP/nxp-demo-experience-assets.git;protocol=https"
-SRCBRANCH_model = "lf-6.6.23_2.0.0"
+SRCBRANCH_model = "lf-6.6.36_2.1.0"
 
 NXP_BTPLAYER_SRC ?= "git://github.com/nxp-imx-support/imx-voiceplayer.git;protocol=https"
 NXP_IMX_VOICEPLAYER_SRC ?= "${NXP_BTPLAYER_SRC}"
 SRCBRANCH_player = "master"
 
-IMX_VOICE_PLAYER_DIR = "/opt/gopoint-apps/scripts/multimedia/imx-voiceplayer"
+IMX_VOICE_PLAYER_DIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/imx-voiceplayer"
 
 SRC_URI = "\
         ${NXPAFE_VOICESEEKER_SRC};branch=${SRCBRANCH_voice};name=voice \
@@ -24,8 +24,8 @@ SRC_URI = "\
 
 SRCREV_FORMAT = "voice_model_player"
 SRCREV_voice = "cc51bc7475c0134fcb006ba28a16b2dcd418cf3a"
-SRCREV_model = "00e5853b0ac0b89abfd65213067f5eed48dc0a27"
-SRCREV_player = "4e67ce33e8905c44395478cdb7a52316a8a5f8fe"
+SRCREV_model = "a552bd1ed30e93011d470636294ff3fa54b9690a"
+SRCREV_player = "ab1304afa7fa4ec4f839bbe0b9c06dadb2a21d25"
 
 S = "${WORKDIR}/git"
 

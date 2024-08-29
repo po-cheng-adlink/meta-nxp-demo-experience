@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=242ef8a3d67a79b1e67096c5e87de59d"
 
 NXP_SMART_KITCHEN_SRC ?= "gitsm://github.com/nxp-imx-support/smart-kitchen.git;protocol=https"
 SRCBRANCH = "master"
-DEMODIR = "/opt/gopoint-apps/scripts/multimedia/smart-kitchen"
+DEMODIR = "${GPNT_APPS_FOLDER}/scripts/multimedia/smart-kitchen"
 
 
 SRC_URI = "${NXP_SMART_KITCHEN_SRC};branch=${SRCBRANCH} \
@@ -20,7 +20,7 @@ DEMOS ?= ""
 
 DEPENDS = "wayland libxkbcommon libxdg-shell wayland-protocols xdg-utils"
 
-RDEPENDS:${PN}+= " bash demo-experience-imx-voiceui-smart-kitchen python3-posix-ipc libxdg-shell wayland-protocols xdg-utils"
+RDEPENDS:${PN}+= " bash voiceui-smart-kitchen python3-posix-ipc libxdg-shell wayland-protocols xdg-utils"
 
 do_patch() {
 	cp ${WORKDIR}/0001-Added-custom_tick_get-function.patch ${WORKDIR}/git/lvgl
@@ -35,10 +35,10 @@ do_compile() {
 }
 
 do_install() {
-    install -d -m 755 ${D}/opt/gopoint-apps/scripts/multimedia/smart-kitchen
-    cp -r ${S}/smart-kitchen-deploy/* ${D}/opt/gopoint-apps/scripts/multimedia/smart-kitchen
+    install -d -m 755 ${D}${GPNT_APPS_FOLDER}/scripts/multimedia/smart-kitchen
+    cp -r ${S}/smart-kitchen-deploy/* ${D}${GPNT_APPS_FOLDER}/scripts/multimedia/smart-kitchen
 }
 
-FILES:${PN} += "/opt/gopoint-apps/scripts/multimedia/smart-kitchen"
+FILES:${PN} += "${GPNT_APPS_FOLDER}/scripts/multimedia/smart-kitchen"
 
 TARGET_CC_ARCH += "${LDFLAGS}"

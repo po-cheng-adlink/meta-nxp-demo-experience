@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=1053d8bb787ee53eb7a075420a4a616e"
 NXP_ELE_DEMO_SRC ?= "gitsm://github.com/nxp-imx-support/imx-ele-demo.git;protocol=https"
 
 SRCBRANCH = "main"
-DEMODIR = "/opt/gopoint-apps/scripts/security/ele"
+DEMODIR = "${GPNT_APPS_FOLDER}/scripts/security/ele"
 
 SRC_URI = "${NXP_ELE_DEMO_SRC};branch=${SRCBRANCH}\
 			file://0001-fix-wayland-busy-flush-and-add-wm_capabilities.patch"
@@ -38,11 +38,11 @@ do_compile() {
 }
 
 do_install() {
-    install -d -m 755 ${D}/opt/gopoint-apps/scripts/security/ele
-    cp -r ${S}/bin/eledemo ${D}/opt/gopoint-apps/scripts/security/ele
-    cp -r ${S}/misc/script/run.sh ${D}/opt/gopoint-apps/scripts/security/ele
+    install -d -m 755 ${D}${GPNT_APPS_FOLDER}/scripts/security/ele
+    cp -r ${S}/bin/eledemo ${D}${GPNT_APPS_FOLDER}/scripts/security/ele
+    cp -r ${S}/misc/script/run.sh ${D}${GPNT_APPS_FOLDER}/scripts/security/ele
 }
 
-FILES:${PN} += "/opt/gopoint-apps/scripts/security/ele"
+FILES:${PN} += "${GPNT_APPS_FOLDER}/scripts/security/ele"
 
 TARGET_CC_ARCH += "${LDFLAGS}"

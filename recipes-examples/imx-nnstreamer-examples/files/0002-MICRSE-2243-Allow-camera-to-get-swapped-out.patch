@@ -1,6 +1,6 @@
-From 572902ca1c971c58857cf75b15b0cc9b778fe72f Mon Sep 17 00:00:00 2001
+From a30d1e14d64c4c7e4ad284cd19bc7a4a2206fcfb Mon Sep 17 00:00:00 2001
 From: Michael Pontikes <michael.pontikes_1@nxp.com>
-Date: Tue, 20 Feb 2024 15:51:06 -0700
+Date: Wed, 28 Aug 2024 14:20:09 -0700
 Subject: [PATCH 2/2] [MICRSE-2243] Allow camera to get swapped out
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH 2/2] [MICRSE-2243] Allow camera to get swapped out
  1 file changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/pose/example_pose_movenet_tflite.py b/pose/example_pose_movenet_tflite.py
-index bff8d0d..e06a0be 100755
+index 800f778..b1d702c 100755
 --- a/pose/example_pose_movenet_tflite.py
 +++ b/pose/example_pose_movenet_tflite.py
 @@ -149,7 +149,7 @@ class PoseExample:
@@ -16,7 +16,7 @@ index bff8d0d..e06a0be 100755
              raise FileExistsError(f'cannot find tflite model [{self.tflite_path}]')
  
 -        video_dir = os.path.join(current_folder, '../downloads/media/movies')
-+        video_dir = os.path.realpath("/opt/gopoint-apps/downloads/gopoint")
++        video_dir = os.path.realpath("/opt/gopoint-apps/downloads")
          self.video_path = os.path.join(video_dir, self.video_file)
          if not os.path.exists(self.video_path):
              raise FileExistsError(f'cannot find video [{self.video_path}]')

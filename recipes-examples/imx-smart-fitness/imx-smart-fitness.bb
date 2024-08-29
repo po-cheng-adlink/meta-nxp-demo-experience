@@ -4,7 +4,7 @@ SECTION = "Machine Learning"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-IMX_SMART_FITNESS_DIR = "/opt/gopoint-apps/scripts/machine_learning/imx_smart_fitness"
+IMX_SMART_FITNESS_DIR = "${GPNT_APPS_FOLDER}/scripts/machine_learning/imx_smart_fitness"
 
 NXP_IMX_SMART_FITNESS_SRC ?= "git://github.com/nxp-imx-support/imx-smart-fitness.git;protocol=https"
 SRCBRANCH = "main"
